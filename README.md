@@ -7,7 +7,6 @@ Interface web em React + TypeScript para gerenciamento de tarefas, consumindo a 
 ## Pré-requisitos
 
 - [Node.js](https://nodejs.org/) 18 ou superior
-- Backend rodando (veja seção abaixo)
 
 ---
 
@@ -26,14 +25,6 @@ npm run dev
 ```
 
 Acesse em: **http://localhost:5173**
-
----
-
-## Backend necessário
-
-O frontend consome a API em `http://localhost:5000`.
-
-Repositório do backend: [task_manager_api](../task_manager_api)
 
 ---
 
