@@ -9,9 +9,10 @@ interface Props {
   onEdit: (id: number, payload: UpdateTaskPayload) => Promise<void>;
   onDelete: (id: number) => Promise<void>;
   onComplete: (task: Task) => Promise<void>;
+  onRetry?: () => void;
 }
 
-export function TaskList({ tasks, loading, error, onEdit, onDelete, onComplete }: Props) {
+export function TaskList({ tasks, loading, error, onEdit, onDelete, onComplete, onRetry }: Props) {
   if (loading) {
     return (
       <div className={styles.centered}>
@@ -25,6 +26,11 @@ export function TaskList({ tasks, loading, error, onEdit, onDelete, onComplete }
     return (
       <div className={styles.errorBox} role="alert">
         <strong>Erro:</strong> {error}
+        {onRetry && (
+          <button className={styles.retryBtn} onClick={onRetry}>
+            Tentar novamente
+          </button>
+        )}
       </div>
     );
   }

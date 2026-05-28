@@ -9,7 +9,7 @@ import styles from './HomePage.module.css';
 export function HomePage() {
   const [filter, setFilter] = useState<TaskStatus | 'all'>('all');
 
-  const { tasks, loading, error, addTask, editTask, removeTask, completeTask } = useTasks(
+  const { tasks, loading, error, fetchTasks, addTask, editTask, removeTask, completeTask } = useTasks(
     filter === 'all' ? undefined : filter
   );
 
@@ -34,6 +34,7 @@ export function HomePage() {
             onEdit={editTask}
             onDelete={removeTask}
             onComplete={completeTask}
+            onRetry={fetchTasks}
           />
         </section>
       </main>

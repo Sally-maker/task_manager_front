@@ -37,6 +37,27 @@
   border-radius: var(--radius);
   color: #b91c1c;
   font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.retryBtn {
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fca5a5;
+  background: transparent;
+  color: #b91c1c;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.retryBtn:hover {
+  background: #fee2e2;
 }
 
 .empty {
