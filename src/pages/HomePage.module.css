@@ -48,3 +48,19 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+@media (max-width: 600px) {
+  .appTitle {
+    font-size: 1.25rem;
+  }
+
+  .main {
+    padding: 1.25rem var(--page-padding);
+    gap: 1.5rem;
+  }
+
+  .listHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
